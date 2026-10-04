@@ -1,0 +1,14 @@
+:root {
+  --ink: #070914;
+  --ink-soft: #0c1020;
+  --ion-cyan: #5ee7ff;
+  --nebula-violet: #8b7bff;
+  --ember: #ffb36b;
+  --text: #e8ecff;
+  --text-muted: #8f97bd;
+  --stroke: rgba(232, 236, 255, 0.10);
+  --glass: rgba(232, 236, 255, 0.04);
+
+  --font-display: 'Sora', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+}

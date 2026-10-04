@@ -1,0 +1,105 @@
+@import './styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: auto; /* Managed by Lenis */
+    background-color: var(--ink);
+    color: var(--text);
+    font-family: var(--font-display);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--ink);
+    color: var(--text);
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  body.custom-cursor-enabled,
+  body.custom-cursor-enabled a,
+  body.custom-cursor-enabled button,
+  body.custom-cursor-enabled input,
+  body.custom-cursor-enabled select,
+  body.custom-cursor-enabled textarea {
+    cursor: none !important;
+  }
+
+  ::selection {
+    background-color: rgba(94, 231, 255, 0.25);
+    color: var(--text);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ion-cyan);
+    outline-offset: 2px;
+  }
+}
+
+/* Outlined Project Numerals */
+.project-numeral {
+  -webkit-text-stroke: 2px var(--ion-cyan);
+  color: transparent;
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  user-select: none;
+}
+
+/* Glass Surface Utility */
+.glass-panel {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--stroke);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(232, 236, 255, 0.07);
+  border-color: rgba(94, 231, 255, 0.3);
+}
+
+/* Conic photo frame animation */
+@keyframes rotate-conic {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-conic {
+
+  animation: rotate-conic 8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-conic {
+    animation: none;
+  }
+}
