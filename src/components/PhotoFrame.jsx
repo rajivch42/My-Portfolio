@@ -9,28 +9,28 @@ export default function PhotoFrame({
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div className={`relative flex flex-col items-center justify-end w-full ${className}`}>
+    <div className={`relative flex flex-col items-center justify-end w-full -translate-y-3 sm:-translate-y-5 lg:-translate-y-8 ${className}`}>
       {/* Diffuse Ambient Atmospheric Glow (Static, No Animation) */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[440px] sm:w-[540px] lg:w-[620px] h-[440px] sm:h-[540px] lg:h-[620px] bg-gradient-to-tr from-ion-cyan/15 via-nebula-violet/15 to-transparent blur-[120px] rounded-full pointer-events-none -z-20"
+        className="absolute top-[46%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[460px] sm:w-[560px] lg:w-[660px] h-[460px] sm:h-[560px] lg:h-[660px] bg-gradient-to-tr from-ion-cyan/15 via-nebula-violet/15 to-transparent blur-[120px] rounded-full pointer-events-none -z-20"
         aria-hidden="true"
       />
 
       {/* Enlarged Cutout Image Container with Smooth Bottom Fade Mask */}
-      <div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[480px] xl:max-w-[540px] flex justify-center items-end group">
+      <div className="relative w-full max-w-[360px] sm:max-w-[450px] lg:max-w-[540px] xl:max-w-[600px] flex justify-center items-end group">
         {!imageError ? (
           <div
             className="relative w-full flex justify-center"
             style={{
-              maskImage: "linear-gradient(to bottom, black 86%, transparent 100%)",
-              WebkitMaskImage: "linear-gradient(to bottom, black 86%, transparent 100%)",
+              maskImage: "linear-gradient(to bottom, black 88%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to bottom, black 88%, transparent 100%)",
             }}
           >
             <img
               src={src}
               alt={alt}
               onError={() => setImageError(true)}
-              className="w-full h-auto max-h-[48vh] sm:max-h-[55vh] lg:max-h-[62vh] xl:max-h-[68vh] object-contain drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] filter transition-all duration-500 group-hover:scale-[1.02] group-hover:drop-shadow-[0_25px_50px_rgba(94,231,255,0.3)]"
+              className="w-full h-auto max-h-[52vh] sm:max-h-[60vh] lg:max-h-[68vh] xl:max-h-[74vh] object-contain drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] filter transition-all duration-500 group-hover:scale-[1.02] group-hover:drop-shadow-[0_25px_50px_rgba(94,231,255,0.3)]"
               loading="eager"
             />
           </div>
