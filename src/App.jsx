@@ -12,6 +12,7 @@ import ClickSpark from "@/components/ClickSpark";
 import CommandPalette from "@/components/CommandPalette";
 
 import { initLenis, destroyLenis } from "@/lib/lenis";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [paletteOpen, setPaletteOpen] = useState(false);
@@ -65,6 +66,9 @@ export default function App() {
         isOpen={paletteOpen}
         onClose={() => setPaletteOpen(false)}
       />
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 }

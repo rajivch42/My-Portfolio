@@ -1,4 +1,4 @@
-﻿# Product Requirements Document (PRD)
+# Product Requirements Document (PRD)
 ## Rajiv Chaurasiya — Developer Portfolio
 
 **Version:** 1.0

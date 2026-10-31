@@ -1,4 +1,4 @@
-﻿# Project Rules
+# Project Rules
 
 Non-negotiable conventions. If a rule conflicts with a task, ask before breaking it.
 

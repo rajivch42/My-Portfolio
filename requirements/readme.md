@@ -1,4 +1,4 @@
-﻿# Rajiv Chaurasiya — Portfolio
+# Rajiv Chaurasiya — Portfolio
 
 A dark, technical portfolio for **Rajiv Chaurasiya**, Full Stack Developer.
 Built with Vite + React 18 + Tailwind CSS + GSAP + Motion + React Bits.

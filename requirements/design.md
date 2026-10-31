@@ -1,4 +1,4 @@
-﻿# Design System
+# Design System
 ## Night Sky, Launch Pad
 
 ---
